@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import TaskList from './components/TaskList';
 
 const TASKS = [
   {
@@ -21,7 +22,9 @@ const App = () => {
         <h1>Ada&apos;s Task List</h1>
       </header>
       <main>
-        <div>          
+        <div>
+          <TaskList tasks={TASKS}></TaskList>
+          {/* <Task id={TASKS[0].id} text={TASKS[0].text} done={TASKS[0].done} /> */}
         </div>
       </main>
     </div>
