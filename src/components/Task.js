@@ -1,32 +1,27 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import './Task.css';
+import PropTypes from 'prop-types';
 
 const Task = ({ id, text, done }) => {
   const [isDone, setIsDone] = useState(done);
-  const [taskText, setTaskText] = useState(text);
 
   const toggleDone = () => {
-    //console.log('toggle Done');
     setIsDone(!isDone);
-    //console.log(isDone);
   };
 
-  const buttonClass = isDone ? 'tasks__item__toggle--completed' : '';
+  // let buttonIsCompleteClass = ''
+  // if (isDone) {
+  //   buttonIsCompleteClass = 'tasks__item__toggle--completed';
+  // }
+
+  const buttonIsCompleteClass = isDone ? 'tasks__item__toggle--completed' : '';
 
   return (
-    <li className="tasks__item">
+    <li className="task__item">
       <button
-        className={`tasks__item__toggle ${buttonClass}`}
+        className={`tasks__item__toggle ${buttonIsCompleteClass}`}
         onClick={toggleDone}
       >
-        {/* <button
-          onClick={() => {
-            setTaskText('hello world');
-          }}
-        > */}
-        {/* change text to hello world
-        </button> */}
         {text}
       </button>
     </li>

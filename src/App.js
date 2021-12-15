@@ -16,6 +16,8 @@ const TASKS = [
 ];
 
 const App = () => {
+  const task = TASKS[0];
+
   return (
     <div className="App">
       <header className="App-header">
@@ -23,8 +25,7 @@ const App = () => {
       </header>
       <main>
         <div>
-          <TaskList tasks={TASKS}></TaskList>
-          {/* <Task id={TASKS[0].id} text={TASKS[0].text} done={TASKS[0].done} /> */}
+          <TaskList tasks={TASKS} />
         </div>
       </main>
     </div>
